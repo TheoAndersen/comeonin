@@ -8,4 +8,5 @@ otp_release:
 sudo: false
 after_script:
   - mix deps.get --only docs
+  - mix compile
   - MIX_ENV=docs mix inch.report
