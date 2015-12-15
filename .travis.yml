@@ -1,6 +1,9 @@
+os:
+  - linux
+  - osx
 language: elixir
 elixir:
-  - 1.1.0
+  - 1.1.1
 otp_release:
   - 17.5
   - 18.0
@@ -8,4 +11,5 @@ otp_release:
 sudo: false
 after_script:
   - mix deps.get --only docs
+  - mix compile
   - MIX_ENV=docs mix inch.report
